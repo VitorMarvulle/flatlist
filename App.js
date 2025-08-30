@@ -6,10 +6,10 @@ import Header from './components/Header';
 
 export default function App() {
   const horizontalData = [
-    { id: '1', title: 'image 1', image: 'https://picsum.photos/200/200' },
-    { id: '2', title: 'image 2', image: 'https://picsum.photos/201/201' },
-    { id: '3', title: 'image 3', image: 'https://picsum.photos/202/202' },
-    { id: '4', title: 'image 4', image: 'https://picsum.photos/203/203' },
+    { id: '1', title: 'image 1', image: 'https://picsum.photos/100/200' },
+    { id: '2', title: 'image 2', image: 'https://picsum.photos/101/201' },
+    { id: '3', title: 'image 3', image: 'https://picsum.photos/100/200' },
+    { id: '4', title: 'image 4', image: 'https://picsum.photos/103/203' },
   ];
 
   const verticalData = [
@@ -27,7 +27,7 @@ export default function App() {
             horizontal
             data={horizontalData}
             renderItem={({ item }) => (
-              <HorizontalCard item={item} />
+              <HorizontalCard title={item.title} image={item.image} />
             )}
             keyExtractor={item => item.id}
             showsHorizontalScrollIndicator={false}
